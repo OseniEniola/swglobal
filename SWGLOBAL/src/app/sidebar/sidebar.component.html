@@ -10,25 +10,25 @@
    </a>
   </li>
   <li>
-   <a href="#">
+   <a href="/service-list">
     <i class="fa fa-tachometer" aria-hidden="true"></i> Update Services
    </a>
   </li>
-  <li class="header">Services</li>
+  <li (click)="toggleView('services')" class="header">Services</li>
   <li>
-   <a href="#">
+   <a (click)="toggleView('services')" href="#">
     <i class="fa fa-users" aria-hidden="true"></i> Mobile Recharge
    </a>
   </li>
   <li>
-   <a href="#">
+   <a (click)="toggleView('services')" href="#">
     <i class="fa fa-users" aria-hidden="true"></i> Pay Bills
    </a>
   </li>
   <li>
   <li class="header">Reports</li>
   <li>
-   <a href="#">
+   <a (click)="toggleView('service-list')" href="/service-list">
     <i class="fa fa-cog" aria-hidden="true"></i> View Reports
    </a>
   </li>
@@ -39,6 +39,7 @@
 
  <div class="container-fluid">
 
-  <app-services></app-services>
+  <app-services *ngIf="show=='services'"></app-services>
+  <app-service-list *ngIf="show=='service-list'"></app-service-list>
  </div>
 </div>

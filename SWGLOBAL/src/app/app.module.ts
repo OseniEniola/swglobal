@@ -13,8 +13,7 @@ import { PurchaseCardComponent } from './purchase-card/purchase-card.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +29,8 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
     BrowserModule,
     AppRoutingModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [{provide: MAT_DIALOG_DATA, useValue: {} }],
   bootstrap: [AppComponent]
