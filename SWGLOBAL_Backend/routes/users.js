@@ -22,7 +22,11 @@ router.get('/test',(req,res)=>{
   })
 })
 router.get('/auth/:username.:password', function(request, response) {
+<<<<<<< HEAD
 	var username = request.body.username;
+=======
+	var username = request.body.params;
+>>>>>>> a4f81634dc515cb73d921737835c5add6e07dafb
 	var password = request.body.password;
 	if (username && password) {
 		connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
